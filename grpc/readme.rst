@@ -23,10 +23,6 @@ Docker-compose
 | Do the following steps:
 |
 
-* Start a local IAST manager instance
-* Edit the provided ``.env`` file if needed or use ``.env.linux`` file in linux
-* Set ``IAST_MANAGER_URL=http://host.docker.internal:8380`` manually in the relevant docker-compose.yml file
-
 .. code-block:: bash
 
     # Windows
@@ -50,7 +46,7 @@ Flow Triggering
 ---------------
 
 
-To trigger gRPC flows you can sent request to ``8121/grpc/send?message=${text}``:
+To trigger gRPC flows you can sent request to ``http://localhost:8121/grpc/send?message=${text}``:
 Replace *${text}* with the following input to get the relevant vulnerability:
 
 * *sqli* -> SQL injection
